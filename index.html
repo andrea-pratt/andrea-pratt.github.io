@@ -1,23 +1,29 @@
-<!-- saved from url=(0070)https://myr512dev.crm.dynamics.com/WebResources/crc14_lOutV5?preview=1 -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./crc14_lOutV5_files/lightning.out.js"></script>
-</head><body><div id="lOutFormContent">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div id="lightningout"></div>
 
-</div>
-
-<script>
-    $Lightning.use("c:appProjectCloseout",    // name of the Lightning app
-        function() {                  // Callback once framework and app loaded
-            $Lightning.createComponent(
-                "c:reportChartWrapper", // top-level component of your app
-                { },                  // attributes to set on the component when created
-                "lOutFormContent",   // the DOM location to insert the component
-                function(cmp) {
-                    // callback when component is created and active on the page
-                    console.log('loaded component');
-                }
-            );
+    <script src="https://myrgroup--uat.sandbox.lightning.force.com//lightning/lightning.out.js"></script>
+    <script>
+      $Lightning.use(
+        'c:appProjectCloseout', // name of the Lightning app
+        function () {
+          // Callback once framework and app loaded
+          $Lightning.createComponent(
+            'c:reportChartWrapper', // top-level component of your app
+            {}, // attributes to set on the component when created
+            'lightningout', // the DOM location to insert the component
+            function (cmp) {
+              // callback when component is created and active on the page
+            }
+          );
         },
-        'https://myrgroup--uat.sandbox.my.site.com/projectCloseout'  // Site endpoint
-    );
-</script>
-</body></html>
+        'https://myrgroup--uat.sandbox.my.site.com/projectCloseout' // Site endpoint
+      );
+    </script>
+  </body>
+</html>
