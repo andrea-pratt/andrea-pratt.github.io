@@ -2,11 +2,6 @@
 <html>
 
 <body>
-	<div style="margin-top:2rem" class="slds-align_absolute-center">
-		<!-- Use Lightning Out to create the Dashboard app and component -->
-		<button onclick="initializeApp();" class="slds-button">Run Dashboard</button>
-	</div>
-
 	<div id="spinner" style="display:none" class="spinner-border slds-align_absolute-center"></div>
 
 	<!-- Dashboard Embed Container -->
@@ -37,7 +32,8 @@
 				alert('Starting Authentication');
 
 			if (token)
-				alert('Authentication Complete! :)');//('We got the token! :D *hopefully the right one!*');
+				alert('Authentication Complete! :)');
+				initializeApp()
 			else
 				window.location = OAuthURL;
 
