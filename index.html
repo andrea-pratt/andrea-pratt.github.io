@@ -7,14 +7,14 @@
   <body>
     <div id="lightningout"></div>
 
-    <script src="https://myrgroup--uat.sandbox.lightning.force.com/lightning/lightning.out.js"></script>
+    <script src="https://sf-practice-n-prep-dev-ed.develop.my.salesforce.com/lightning/lightning.out.js"></script>
     <script>
       $Lightning.use(
-        'c:appProjectCloseout', // name of the Lightning app
+        'c:lightningOutApp', // name of the Lightning app
         function () {
           // Callback once framework and app loaded
           $Lightning.createComponent(
-            'c:reportChartWrapper', // top-level component of your app
+            'c:testLightningOut', // top-level component of your app
             {}, // attributes to set on the component when created
             'lightningout', // the DOM location to insert the component
             function (cmp) {
@@ -22,7 +22,7 @@
             }
           );
         },
-        'https://myrgroup--uat.sandbox.my.site.com/projectClosout' // Site endpoint
+        'https://sf-practice-n-prep-dev-ed.develop.my.salesforce-sites.com/' // Site endpoint
       );
     </script>
   </body>
