@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html>
    <body>
-      <div class="headerContainer">
-      </div>
-      <div style="margin-top:2rem" class="slds-align_absolute-center">
-		 
-		 <!-- Use Lightning Out to create the Dashboard app and component -->
-         <button onclick="initializeApp();" class="slds-button">Run Dashboard</button>
-		 
-      </div>
 	  
       <div id="spinner" style="display:none" class="spinner-border slds-align_absolute-center"></div>
 	  
@@ -116,7 +108,7 @@
 				alert('Starting Authentication');
 			 
 			 if(token)
-				alert('Authentication Complete! :)');//('We got the token! :D *hopefully the right one!*');
+			 	initializeApp();
 			 else
 				window.location = OAuthURL;
          	
